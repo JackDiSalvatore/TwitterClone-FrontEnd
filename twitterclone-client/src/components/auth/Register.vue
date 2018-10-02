@@ -29,10 +29,10 @@ export default {
    },
    methods: {
       register: function() {
-         this.$http.post(process.env.API + "users", this.user)
+         this.$http.post(process.env.API + 'users', this.user)
          .then(function (res) {
-            alertify.success("Success, you can now login");
-            this.$router.push("/auth")
+            alertify.success('Success, you can now login');
+            this.$router.push('/auth')
          })
       }
    }
