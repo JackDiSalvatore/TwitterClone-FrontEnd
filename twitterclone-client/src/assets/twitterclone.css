@@ -1,0 +1,114 @@
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+
+}
+
+/* Transition: fade */
+.fade-enter-active {
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    opacity: 1;
+}
+.fade-enter {
+    opacity: 0;
+}
+.fade-leave {
+    display: none;
+}
+.fade-leave-active {
+    display: none;
+}
+/*************************/
+
+.scale-enter-active {
+
+}
+.scale-enter {
+
+}
+.scale-leave {
+    transform: scale(1, 1);
+}
+.scale-leave-active {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    transform: scale(0, 0);
+    z-index: 20;
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.m-t-15 {
+    margin-top: 15px;
+}
+
+.m-b-15 {
+    margin-bottom: 15px;
+}
+
+.m-t-0 {
+    margin-top: 0;
+}
+
+.m-b-0 {
+    margin-bottom: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+/***** Alertify *****/
+.alertify-notifier .ajs-message.ajs-error{
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    background: rgba(255,0,0, 0.6);
+    /* make background a faded/white red*/
+    border-radius: 10px 10px;
+    /*border: 1px solid #ff0000;*/
+    text-shadow: 0px 0px 0 rgba(0, 0, 0, 0.0);
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.alertify-notifier .ajs-message.ajs-success{
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    background: rgba(152, 206, 140, 1.0);
+    /* make background a faded/white red*/
+    border-radius: 10px 10px;
+    /*border: 1px solid #ff0000;*/
+    text-shadow: 0px 0px 0 rgba(0, 0, 0, 0.0);
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/***** Alertify *****/
