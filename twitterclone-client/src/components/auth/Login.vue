@@ -28,7 +28,9 @@ export default {
       login: function() {
          this.$http.post(process.env.API + '/auth', this.user)
          .then( function(res) {
-
+            /* 14400000 = four hours in mili seconds */
+            this.$auth.setToken(res.body.token, Date.now() + 14400000 )
+            this.$router.push('/newsfeed')
          })
       }
    }
