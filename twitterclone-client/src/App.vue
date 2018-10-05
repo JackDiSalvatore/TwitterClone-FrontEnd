@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/Twitter_Logo_Blue_resized.png">
     <router-view/>
   </div>
 </template>
