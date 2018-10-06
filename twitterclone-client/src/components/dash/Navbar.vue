@@ -86,10 +86,11 @@ img {
 }
 
 #searchInput{
-  width: 6rem;
-  padding: 0;
+  width: 8rem;
+  padding-right: 8px;
+  padding-left: 8px;
   border-radius: 20px ;
-  background: transparent;
+  background-color: #f4f4f4;
   border:transparent;
   outline:none;
   box-shadow: none;

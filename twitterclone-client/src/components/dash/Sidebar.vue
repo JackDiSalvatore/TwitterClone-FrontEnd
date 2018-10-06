@@ -4,7 +4,7 @@
       <h4>Username</h4>
 
       <div class="tweet m-t-20 m-b-20">
-         <textarea class="form-control m-b-15" rows="10" placholder="customize your message" maxlength="320"></textarea>
+         <textarea class="form-control m-b-15" rows="10" placeholder="tell the world something..." maxlength="320"></textarea>
          <p class="text-muted">320 chareacters remaining</p>
          <p class="text-center no-margin"><button class="btn">Tweet!</button></p>
       </div>
@@ -31,9 +31,10 @@ export default {
 }
 
 .tweet textarea {
-   background: transparent;
+   background-color: #f4f4f4;
    /*box-shadow: none;*/
-   border: 1px solid rgba(75, 161, 236, 0.3);/*#4BA1EC*/
+   border: 1px solid #f4f4f4;
+   border-radius: 12px;
    resize: vertical;
 }
 
