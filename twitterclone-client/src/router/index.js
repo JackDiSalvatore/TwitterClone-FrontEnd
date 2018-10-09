@@ -18,7 +18,8 @@ export default new Router({
       children: [
          {
             path: 'newsfeed',
-            component: Newsfeed
+            component: Newsfeed,
+            meta: { requiresAuth: true }
          }
       ]
     },
