@@ -16,22 +16,6 @@ body {
 
 }
 
-/* Transition: fade */
-.fade-enter-active {
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s;
-    opacity: 1;
-}
-.fade-enter {
-    opacity: 0;
-}
-.fade-leave {
-    display: none;
-}
-.fade-leave-active {
-    display: none;
-}
-/*************************/
 
 .scale-enter-active {
 
@@ -83,6 +67,51 @@ body {
     margin: 0;
 }
 
+
+/********** Auth.vue **********/
+
+/* Transition: fade */
+.fade-enter-active {
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    opacity: 1;
+}
+.fade-enter {
+    opacity: 0;
+}
+.fade-leave {
+    display: none;
+}
+.fade-leave-active {
+    display: none;
+}
+
+.authInput {
+    border-radius: 0;
+    border:transparent;
+    outline:none;
+    box-shadow: none;
+}
+
+.authInput:focus {
+    box-shadow: none;
+    border-bottom: 1px solid #4BA1EC;
+}
+
+.authButton {
+   color: #FFFFFF;
+   background: #4BA1EC;
+   border-radius: 12px;
+}
+
+.authButton:hover {
+   color: #4BA1EC;
+   background: #FFFFFF;
+   border-color: #4BA1EC;
+}
+/********** Auth.vue **********/
+
+
 /***** Alertify *****/
 .alertify-notifier .ajs-message.ajs-error{
     color: white;
@@ -112,3 +141,4 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 /***** Alertify *****/
+
