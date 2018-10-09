@@ -42,6 +42,11 @@ export default {
    color: #FFFFFF;
    background: #4BA1EC;
 }
+.btn:hover {
+   color: #4BA1EC;
+   background: #FFFFFF;
+   border-color: #4BA1EC;
+}
 
 p.text-muted {
    font-size: 0.8em;
