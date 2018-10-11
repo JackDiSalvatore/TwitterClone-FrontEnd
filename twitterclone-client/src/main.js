@@ -24,7 +24,7 @@ Vue.http.interceptors.push(function(request, next) {
       request.url = process.env.API + request.url
 
       /* authorization headers (see api) */
-      var token = Vue.getToken();
+      var token = Vue.auth.getToken()
       if (token)
         request.headers.set('Authorization','Bearer ' + token)
    }
