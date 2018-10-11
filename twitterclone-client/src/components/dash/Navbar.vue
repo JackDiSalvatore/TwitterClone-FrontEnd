@@ -23,7 +23,7 @@
           <b-navbar-nav id="userSettings" class="pull-right">
 
             <b-nav-form>
-              <b-form-input id="searchInput" size="sm" type="text" placeholder="Search..."/>
+              <b-form-input id="searchInput" size="sm" type="text" placeholder="Search ..."/>
               <b-button id="searchButton" size="sm" type="submit"><i class="fa fa-search"></i></b-button>
             </b-nav-form>
 
@@ -31,8 +31,8 @@
               <template slot="button-content">
                 <i class="fa fa-user"></i>
               </template>
-              <b-dropdown-item href="#">Profile</b-dropdown-item>
-              <b-dropdown-item href="#">Signout</b-dropdown-item>
+              <b-dropdown-item href="#">{{user.username}}</b-dropdown-item>
+              <b-dropdown-item href="#" @click.prevent="logout">Signout</b-dropdown-item>
             </b-nav-item-dropdown>
 
           </b-navbar-nav>
@@ -46,7 +46,32 @@
 
 <script>
 export default {
-   name: "navbar"
+   name: "navbar",
+   created: function() {
+      this.getUser()
+   },
+   data: function() {
+     return {
+         user: {
+            username: '',
+            about: '',
+            avatar: ''
+         }
+      }
+   },
+   methods: {
+      getUser: function() {
+         this.$http.get('/users/me')
+             .then(function(res) {
+                this.user = res.body
+             })
+      },
+     logout: function() {
+       this.$auth.destroyToken()
+       this.user = {}
+       this.$router.push('/auth/login')
+     }
+   }
 }
 </script>
 

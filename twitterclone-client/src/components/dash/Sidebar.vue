@@ -1,11 +1,13 @@
 <template>
    <div id="sidebar" class="text-center">
 
-      <h4>Username</h4>
+      <h4>@{{user.username}}</h4>
 
       <div class="tweet m-t-20 m-b-20">
-         <textarea class="form-control m-b-15" rows="10" placeholder="tell the world something..." maxlength="320"></textarea>
-         <p class="text-muted">320 chareacters remaining</p>
+         <textarea class="form-control m-b-15" rows="10" placeholder="Tell the world something ..." maxlength="320"
+         v-model="newTweet"></textarea>
+         <p class="text-muted">{{160 - newTweet.length}} chareacter{{ (160 - newTweet.length == 1) ? '' : 's' }}
+          remaining</p>
          <p class="text-center no-margin"><button class="btn">Tweet!</button></p>
       </div>
 
@@ -14,7 +16,28 @@
 
 <script>
 export default {
-   name: "sidebar"
+   name: "sidebar",
+   created: function() {
+      this.getUser()
+   },
+   data: function() {
+     return {
+         user: {
+            username: '',
+            about: '',
+            avatar: ''
+         },
+         newTweet: ''
+      }
+   },
+   methods: {
+      getUser: function() {
+         this.$http.get('/users/me')
+             .then(function(res) {
+                this.user = res.body
+             })
+      }
+   }
 }
 </script>
 
@@ -35,7 +58,7 @@ export default {
    /*box-shadow: none;*/
    border: 1px solid #f4f4f4;
    border-radius: 12px;
-   resize: vertical;
+   resize: none;
 }
 
 .btn {
