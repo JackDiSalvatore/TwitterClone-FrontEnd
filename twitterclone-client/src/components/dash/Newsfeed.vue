@@ -1,12 +1,18 @@
 <template>
-   <div>
-
+   <div id="newsfeed">
+      <!-- <h2 class="m-t-0 m-b-20">Tweets</h2> -->
+      <tweet-list></tweet-list>
    </div>
 </template>
 
 <script>
+import TweetList from '@/components/dash/TweetList.vue';
+
 export default {
-   name: "newsfeed"
+   name: "newsfeed",
+   components: {
+      tweetList: TweetList,
+   }
 }
 </script>
 
