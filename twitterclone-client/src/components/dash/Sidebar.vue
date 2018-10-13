@@ -54,16 +54,23 @@ export default {
 }
 
 .tweet textarea {
-   background-color: #f4f4f4;
+   /* transittion */
+   transition: all 0.5s ease;
+
    /*box-shadow: none;*/
    border: 1px solid #f4f4f4;
    border-radius: 12px;
    resize: none;
 }
+.tweet textarea:hover {
+   background-color: #f4f4f4;
+}
 
 .btn {
    color: #FFFFFF;
    background: #4BA1EC;
+   /* transittion */
+   transition: all 1s ease;
 }
 .btn:hover {
    color: #4BA1EC;
