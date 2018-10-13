@@ -1,7 +1,7 @@
 <template>
 
   <div id="navbar">
-    <b-navbar id="innerNav" sticky-top toggleable="md" type="light" variant="faded" role="navigation">
+    <b-navbar id="innerNav" toggleable="md" type="light" variant="faded" role="navigation">
 
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
@@ -110,12 +110,16 @@ img {
   padding-right: 8px;
   padding-left: 8px;
   border-radius: 20px ;
-  background-color: #f4f4f4;
   border:transparent;
+  /* transittion */
+  transition: all 0.5s ease;
   outline:none;
   box-shadow: none;
 }
-
+#searchInput:hover {
+  outline: none;
+  background-color: #f4f4f4;
+}
 #searchInput:focus {
   outline: none;
 }
